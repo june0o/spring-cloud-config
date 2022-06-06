@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: '{cipher}a5dcd53ab34fc4375ce3b5f9349bf1687cdab505004a8d4b75561dda26b79f2f'
+
+token:
+  expiration_time: 86400000
+  secret: user_token_native_userservice
+
+gateway:
+  ip: 172.31.99.186
+
+order_service:
+  url: http://ORDER-SERVICE/order-service/%s/orders
+  exception:
+    order_is_empty: "There is no item."
